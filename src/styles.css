@@ -1,20 +1,28 @@
-/* Container for each folder */
-.folder-container {
-  margin-top: 6px;
-  padding: 6px;
-  border-radius: 6px;
-  background: #fafafa;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+/* App container */
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
 }
 
-/* Folder header (icon + name + buttons) */
+/* Folder container (box style) */
+.folder-container {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Folder header: icon + name + buttons */
 .folder-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   padding: 4px 8px;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: background 0.2s ease-in-out;
 }
 
@@ -22,7 +30,7 @@
   background: #f0f0f0;
 }
 
-/* Folder icon style */
+/* Folder icon */
 .folder-icon {
   font-weight: bold;
   color: goldenrod;
@@ -31,13 +39,13 @@
   gap: 5px;
 }
 
-/* Buttons for folder/file */
+/* Buttons for Folder+ / File+ */
 .action-buttons button {
   margin-left: 6px;
   padding: 2px 8px;
   border: none;
   border-radius: 4px;
-  background: #4cafef;
+  background-color: #4cafef;
   color: white;
   font-size: 12px;
   cursor: pointer;
@@ -45,13 +53,14 @@
 }
 
 .action-buttons button:hover {
-  background: #007bff;
+  background-color: #007bff;
 }
 
-/* Children area */
+/* Folder children */
 .folder-children {
-  padding-left: 16px;
-  margin-top: 4px;
+  padding-left: 20px;
+  margin-top: 6px;
+  transition: all 0.3s ease;
 }
 
 .folder-children.collapsed {
@@ -62,32 +71,35 @@
   display: block;
 }
 
-/* File item */
+/* File item style */
 .file-item {
   margin-top: 4px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: background 0.2s ease-in-out;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: #f9f9f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
 }
 
 .file-item:hover {
-  background: #f9f9f9;
+  background: #f0f0f0;
 }
 
-/* Input for creating new folder/file */
+/* Input wrapper for new folder/file */
 .input-wrapper {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin: 4px 0;
+  margin-top: 4px;
 }
 
 .input-wrapper input {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 2px 6px;
-  outline: none;
   font-size: 14px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
 }
 
 .input-wrapper input:focus {

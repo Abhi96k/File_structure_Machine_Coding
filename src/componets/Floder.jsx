@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles.css";
 
 export function Floder({ explorer, onAdd }) {
   const [expand, setExpand] = useState(false);
@@ -27,7 +28,7 @@ export function Floder({ explorer, onAdd }) {
 
   const onAddItem = (e) => {
     if (e.key === "Enter" && e.target.value) {
-      onAdd(explorer.id, e.target.value, showInput.isFolder); // 🔥 update tree
+      onAdd(explorer.id, e.target.value, showInput.isFolder);
       setShowInput({ ...showInput, visible: false });
       e.target.value = "";
     }
