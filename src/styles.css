@@ -1,4 +1,96 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+/* Container for each folder */
+.folder-container {
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  background: #fafafa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Folder header (icon + name + buttons) */
+.folder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease-in-out;
+}
+
+.folder-header:hover {
+  background: #f0f0f0;
+}
+
+/* Folder icon style */
+.folder-icon {
+  font-weight: bold;
+  color: goldenrod;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Buttons for folder/file */
+.action-buttons button {
+  margin-left: 6px;
+  padding: 2px 8px;
+  border: none;
+  border-radius: 4px;
+  background: #4cafef;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-buttons button:hover {
+  background: #007bff;
+}
+
+/* Children area */
+.folder-children {
+  padding-left: 16px;
+  margin-top: 4px;
+}
+
+.folder-children.collapsed {
+  display: none;
+}
+
+.folder-children.expanded {
+  display: block;
+}
+
+/* File item */
+.file-item {
+  margin-top: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background 0.2s ease-in-out;
+}
+
+.file-item:hover {
+  background: #f9f9f9;
+}
+
+/* Input for creating new folder/file */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.input-wrapper input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-wrapper input:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 3px rgba(76, 175, 239, 0.5);
 }

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./styles.css";
-import { explorer } from "./data/floderData";
-
-import { Floder } from "./componets/Floder";
+import { explorer } from "./data/floderData.js";
+import { Floder } from "./componets/Floder.jsx";
 
 export default function App() {
-  const [exploreData, setExploreData] = useState(explorer);
+  const [exploreData] = useState(explorer);
+
   return (
-    <div className="App">
+    <div className="app">
       <Floder explorer={exploreData} />
     </div>
   );
